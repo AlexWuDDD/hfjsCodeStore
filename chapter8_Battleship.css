@@ -1,0 +1,51 @@
+body{
+    background-color: black;
+}
+
+div#board{
+    position: relative; //按正常的网页排版方式定位
+    width: 1024px;
+    height: 863px;
+    margin: auto;
+    background: url("chapter8_images/board.jpg") no-repeat;
+}
+
+div#messageArea{
+    position: absolute; //基于父元素位置指定元素
+    top: 0px;
+    left: 0px;
+    color: rgb(83, 175, 19);
+}
+
+table{
+    position: absolute;
+    left: 173px;
+    top: 98px;
+    board-spacoing: 0px;
+}
+
+td{
+    width: 94px;
+    height: 94px;
+}
+
+form{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    padding: 15px;
+    background-color: rgb(83, 175, 19);
+}
+
+form input{
+    background-color: rgb(152, 207, 113);
+    border-color: rgb(83, 175, 19);
+    font-size: 1em;
+}
+
+.hit{
+    background: url("chapter8_images/ship.png") no-repeat center center;
+}
+.miss{
+    background: url("chapter8_images/miss.png") no-repeat center center;
+}

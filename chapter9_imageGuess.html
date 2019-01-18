@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Guess</title>
+    <style>
+        body{margin: 20px;}
+        img{margin: 20px;}
+    </style>
+    <script>
+        window.onload = init;
+        function init() {
+            /*
+            var image = document.getElementById("zero");
+            image.onclick = showImageZero;
+
+            var image1 = document.getElementById("one");
+            image1.onclick = showImageOne;
+
+            var image2 = document.getElementById("two");
+            image2.onclick = showImageTwo;
+
+            var image3 = document.getElementById("three");
+            image3.onclick = showImageThree;
+
+            var image4 = document.getElementById("four");
+            image4.onclick = showImageFour;
+
+            var image5 = document.getElementById("five");
+            image5.onclick = showImageFive;
+            */
+            var images = document.getElementsByTagName("img");
+            for(var i=0; i<images.length; ++i){
+                //images[i].onclick = showAnswer;
+                images[i].onmouseover = myHandler;
+            }
+            
+        }
+
+        function myHandler(eventObj) {
+            var image = eventObj.target;
+            var name = image.id;
+            name = "chapter9_images/" + name + ".jpg";
+            image.src = name;
+        }
+        function showAnswer(eventObj) {
+            var image = eventObj.target;
+
+            var name = image.id;
+            name = "chapter9_images/" + name + ".jpg";
+            image.src = name;
+
+            setTimeout(reblur, 2000, image);
+        }
+
+        function reblur(image) {
+            var name = image.id;
+            name = "chapter9_images/" + name + "blur.jpg";
+            image.src = name;
+        }
+/*
+        function showImageZero() {
+            var image = document.getElementById("zero");
+            image.src="chapter9_images/zero.jpg";
+        }
+
+        function showImageOne() {
+            var image = document.getElementById("one");
+            image.src="chapter9_images/one.jpg";
+        }
+        function showImageTwo() {
+            var image = document.getElementById("two");
+            image.src="chapter9_images/two.jpg";
+        }
+        function showImageThree() {
+            var image = document.getElementById("three");
+            image.src="chapter9_images/three.jpg";
+        }
+        function showImageFour() {
+            var image = document.getElementById("four");
+            image.src="chapter9_images/four.jpg";
+        }
+        function showImageFive() {
+            var image = document.getElementById("five");
+            image.src="chapter9_images/five.jpg";
+        }
+*/
+
+    </script>
+</head>
+<body>
+    <img id="zero" src="chapter9_images/zeroblur.jpg">
+    <img id="one" src="chapter9_images/oneblur.jpg">
+    <img id="two" src="chapter9_images/twoblur.jpg">
+    <img id="three" src="chapter9_images/threeblur.jpg">
+    <img id="four" src="chapter9_images/fourblur.jpg">
+    <img id="five" src="chapter9_images/fiveblur.jpg">
+
+</body>
+</html>
